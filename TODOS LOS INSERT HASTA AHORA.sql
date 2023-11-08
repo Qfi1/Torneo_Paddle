@@ -56,50 +56,50 @@ VALUES
 
 
 
-INSERT INTO participantes (id_participante, dni_participante, apellido, nombre, edad, direccion, telefono, sexo, puntos_participante)
-VALUES (1, '12345678', 'Gomez', 'Juan', 25, 'Calle 123', '123456789', 'Masculino', FLOOR(RAND() * 1201));
+INSERT INTO participantes (id_participante, dni_participante, apellido, nombre,  direccion, telefono, sexo, puntos_participante)
+VALUES (1, '12345678', 'Gomez', 'Juan', 'Calle 123', '123456789', 'Masculino', FLOOR(RAND() * 1201));
 
-INSERT INTO participantes (id_participante, dni_participante, apellido, nombre, edad, direccion, telefono, sexo, puntos_participante)
-VALUES (2, '23456789', 'Lopez', 'Maria', 30, 'Avenida 456', '987654321', 'Femenino', FLOOR(RAND() * 1201));
+INSERT INTO participantes (id_participante, dni_participante, apellido, nombre,  direccion, telefono, sexo, puntos_participante)
+VALUES (2, '23456789', 'Lopez', 'Maria', 'Avenida 456', '987654321', 'Femenino', FLOOR(RAND() * 1201));
 
-INSERT INTO participantes (id_participante, dni_participante, apellido, nombre, edad, direccion, telefono, sexo, puntos_participante)
-VALUES (3, '34567890', 'Rodriguez', 'Carlos', 40, 'Calle 789', '456789123', 'Masculino', FLOOR(RAND() * 1201));
+INSERT INTO participantes (id_participante, dni_participante, apellido, nombre,  direccion, telefono, sexo, puntos_participante)
+VALUES (3, '34567890', 'Rodriguez', 'Carlos', 'Calle 789', '456789123', 'Masculino', FLOOR(RAND() * 1201));
 
-INSERT INTO participantes (id_participante, dni_participante, apellido, nombre, edad, direccion, telefono, sexo, puntos_participante)
-VALUES (4, '45678901', 'Fernandez', 'Laura', 35, 'Avenida 1234', '321654987', 'Femenino', FLOOR(RAND() * 1201));
+INSERT INTO participantes (id_participante, dni_participante, apellido, nombre,  direccion, telefono, sexo, puntos_participante)
+VALUES (4, '45678901', 'Fernandez', 'Laura', 'Avenida 1234', '321654987', 'Femenino', FLOOR(RAND() * 1201));
 
-INSERT INTO participantes (id_participante, dni_participante, apellido, nombre, edad, direccion, telefono, sexo, puntos_participante)
-VALUES (5, '56789012', 'Gonzalez', 'Pedro', 28, 'Calle 567', '789123456', 'Masculino', FLOOR(RAND() * 1201));
+INSERT INTO participantes (id_participante, dni_participante, apellido, nombre, direccion, telefono, sexo, puntos_participante)
+VALUES (5, '56789012', 'Gonzalez', 'Pedro', 'Calle 567', '789123456', 'Masculino', FLOOR(RAND() * 1201));
 
 
-INSERT INTO participantes (id_participante, dni_participante, apellido, nombre, edad, direccion, telefono, sexo, puntos_participante)
-VALUES (6, '12345678', 'Gomez', 'Juan', 25, 'Calle 123', '123456789', 'Masculino', FLOOR(RAND() * 1201));
+INSERT INTO participantes (id_participante, dni_participante, apellido, nombre,  direccion, telefono, sexo, puntos_participante)
+VALUES (6, '12345678', 'Gomez', 'Juan', 'Calle 123', '123456789', 'Masculino', FLOOR(RAND() * 1201));
 
-INSERT INTO participantes (id_participante, dni_participante, apellido, nombre, edad, direccion, telefono, sexo, puntos_participante)
-VALUES (7, '23456789', 'Lopez', 'Maria', 30, 'Avenida 456', '987654321', 'Femenino', FLOOR(RAND() * 1201));
+INSERT INTO participantes (id_participante, dni_participante, apellido, nombre,  direccion, telefono, sexo, puntos_participante)
+VALUES (7, '23456789', 'Lopez', 'Maria',  'Avenida 456', '987654321', 'Femenino', FLOOR(RAND() * 1201));
 
-INSERT INTO participantes (id_participante, dni_participante, apellido, nombre, edad, direccion, telefono, sexo, puntos_participante)
-VALUES (8, '34567890', 'Rodriguez', 'Carlos', 40, 'Calle 789', '456789123', 'Masculino', FLOOR(RAND() * 1201));
+INSERT INTO participantes (id_participante, dni_participante, apellido, nombre, direccion, telefono, sexo, puntos_participante)
+VALUES (8, '34567890', 'Rodriguez', 'Carlos',  'Calle 789', '456789123', 'Masculino', FLOOR(RAND() * 1201));
 
-INSERT INTO participantes (id_participante, dni_participante, apellido, nombre, edad, direccion, telefono, sexo, puntos_participante)
-VALUES (9, '45678901', 'Fernandez', 'Laura', 35, 'Avenida 1234', '321654987', 'Femenino', FLOOR(RAND() * 1201));
+INSERT INTO participantes (id_participante, dni_participante, apellido, nombre,  direccion, telefono, sexo, puntos_participante)
+VALUES (9, '45678901', 'Fernandez', 'Laura',  'Avenida 1234', '321654987', 'Femenino', FLOOR(RAND() * 1201));
 
-INSERT INTO participantes (id_participante, dni_participante, apellido, nombre, edad, direccion, telefono, sexo, puntos_participante)
-VALUES (10, '56789012', 'Gonzalez', 'Pedro', 28, 'Calle 567', '789123456', 'Masculino', FLOOR(RAND() * 1201));
+INSERT INTO participantes (id_participante, dni_participante, apellido, nombre,  direccion, telefono, sexo, puntos_participante)
+VALUES (10, '56789012', 'Gonzalez', 'Pedro',  'Calle 567', '789123456', 'Masculino', FLOOR(RAND() * 1201));
 
-INSERT INTO participantes (dni_participante, apellido, nombre, edad, direccion, telefono, sexo, puntos_participante)
+INSERT INTO participantes (dni_participante, apellido, nombre,direccion, telefono, sexo, puntos_participante)
 VALUES
-('11', 'Gomez', 'Juan', 25, 'Calle 123', '1234567890', 'Masculino', 800 ),
-('12', 'López', 'Maria', 30, 'Avenida 456', '0987654321', 'Femenino', 600), ('34567890', 'Rodríguez', 'Pedro', 35, '
+('11', 'Gomez', 'Juan', 'Calle 123', '1234567890', 'Masculino', 800 ),
+('12', 'López', 'Maria', 'Avenida 456', '0987654321', 'Femenino', 600), ('34567890', 'Rodríguez', 'Pedro',  '
 Calle 789', '9876543210', 'Masculino', 1000),
-('13', 'Fernandez', 'Laura', 28, 'Avenida 012', '0123456789', 'Femenino', 400), ('56789012'
-, 'González', 'Carlos', 32, 'Calle 345', '9876543210', 'Masculino', 900),
-('14', 'Martinez', 'Ana', 27, 'Avenida 678', '0123456789', 'Femenino', 700), ('78901234', 'Pérez', 'Luis', 40, 'Calle 901
+('13', 'Fernandez', 'Laura',  'Avenida 012', '0123456789', 'Femenino', 400), ('56789012'
+, 'González', 'Carlos', 'Calle 345', '9876543210', 'Masculino', 900),
+('14', 'Martinez', 'Ana', 'Avenida 678', '0123456789', 'Femenino', 700), ('78901234', 'Pérez', 'Luis', 'Calle 901
 ' , '1234567890', 'Masculino', 1100),
-('15', 'Sanchez', 'Lucía', 22, 'Avenida 234', '0987654321', 'Femenino', 300), ('90123456', 'Romero', 'Diego', 29, 'Calle 567
+('15', 'Sanchez', 'Lucía', 'Avenida 234', '0987654321', 'Femenino', 300), ('90123456', 'Romero', 'Diego', 'Calle 567
 ' , '9876543210', 'Masculino', 100),
-('16', 'Torres', 'Carolina', 33, 'Avenida 890', '0123456789', 'Femenino', 500), ('12345678', '
-Gomez ', 'Juan', 25, 'Calle 123', '1234567890', 'Masculino', 800);
+('16', 'Torres', 'Carolina', 'Avenida 890', '0123456789', 'Femenino', 500), ('12345678', '
+Gomez ', 'Juan', 'Calle 123', '1234567890', 'Masculino', 800);
 
 
 

@@ -1,6 +1,32 @@
 create schema  torneo_padel;
 use torneo_padel;
 
+create table Audi_inscripciones (
+id int  not null unique auto_increment,
+num_inscripcion int not null,
+pago_nopago varchar (255),
+nombre_accion varchar (10),
+nombre_tabla varchar (50),
+usuario varchar(50) not null,
+fecha date not null,
+PRIMARY KEY (id));
+
+
+
+create table Audi_participantes (
+id int  not null unique auto_increment,
+id_participante int not null,
+puntosbefore_puntosafter varchar (255),
+nombre_accion varchar (10),
+nombre_tabla varchar (50),
+usuario varchar(50) not null,
+fecha date not null,
+PRIMARY KEY (id));
+
+
+
+
+
 CREATE TABLE `categorias` (
   `idcategorias` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) NOT NULL,
@@ -89,3 +115,40 @@ fk_idinscripcion int not null,
 PRIMARY KEY (id),
 Foreign key (fk_idtorneo) references torneos(id),
 Foreign key (fk_idinscripcion) references inscripciones(num_inscripcion));
+
+
+
+ALTER TABLE `torneo_padel`.`participantes` 
+ADD COLUMN `mail` VARCHAR(100) NULL DEFAULT NULL AFTER `puntos_participante`;
+
+ALTER TABLE `torneo_padel`.`participantes` 
+ADD COLUMN `fec_nac` DATETIME NULL AFTER `mail`;
+
+ALTER TABLE `torneo_padel`.`participantes` 
+DROP COLUMN `edad`;
+
+ALTER TABLE `torneo_padel`.`participantes` 
+CHANGE COLUMN `fec_nac` `fec_nac` DATE NULL DEFAULT NULL
+
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '1992-12-02' WHERE (`id_participante` = '1');
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '1993-01-03' WHERE (`id_participante` = '2');
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '1994-11-04' WHERE (`id_participante` = '3');
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '1991-06-21' WHERE (`id_participante` = '4');
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '1998-07-30' WHERE (`id_participante` = '5');
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '1998-02-22' WHERE (`id_participante` = '6');
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '1998-05-23' WHERE (`id_participante` = '7');
+
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '1998-06-30' WHERE (`id_participante` = '9');
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '1994-02-10' WHERE (`id_participante` = '10');
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '1998-08-27' WHERE (`id_participante` = '17');
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '1993-09-10' WHERE (`id_participante` = '18');
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '1975-03-23' WHERE (`id_participante` = '19');
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '1970-04-12' WHERE (`id_participante` = '20');
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '2000-08-21' WHERE (`id_participante` = '21');
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '2001-09-04' WHERE (`id_participante` = '22');
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '2003-11-03' WHERE (`id_participante` = '23');
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '1991-05-23' WHERE (`id_participante` = '24');
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '1982-06-20' WHERE (`id_participante` = '25');
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '1977-08-04' WHERE (`id_participante` = '26');
+UPDATE `torneo_padel`.`participantes` SET `fec_nac` = '1996-09-25' WHERE (`id_participante` = '27');
+
