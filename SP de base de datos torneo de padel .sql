@@ -1,7 +1,4 @@
-##este SP medio flojito pero creo que me pueden ayudar es para que segun tus puntos en la tabla participantes te muestre tu categoria de la tabla categorias siempre basandose en si es mayor o no que los puntos_min 
-## de esa categoria, esta medio flojo pero creo que se puede pulir mas con su apoyo su uso """call sp_participantes_puntos (puntos_participante) hay que poner un numero entre 1 y 1200 y dira la categoria""", 
-##me gustaria que traiga un listado de los nombre de participantes y 
-## al lado la categoria pero deberia hacer un join con dos tablas sin relacion aun asumo que quizas deberia hacer una tabla mas de relacion entre categoria y puntos o en participantes para que sea posible
+##ESTE SP AHORA lo que hace es que te muestra todos los participantes que con su respectivo nombre apellido, puntos acumulados, categoria solo si los puntos min de la categoria es menor al parametro que enviamos
 
 USE `torneo_padel`;
 DROP procedure IF EXISTS `sp_participantes_puntos`;
@@ -15,11 +12,14 @@ USE `torneo_padel`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_participantes_puntos`(in puntos_participante int)
 BEGIN
 IF puntos_participante !=0 then
-	SET @categoria_p = concat(' where puntos_min' ,'<', puntos_participante , ' limit 1');
+	SET @categoria_p = concat(' where puntos_min' ,'<', puntos_participante, ' order by c.nombre');
 ELSE
 	SET @categoria_p = '';
 END IF;
-SET @categoria = concat('Select  nombre  from  categorias', @categoria_p);
+SET @categoria = concat('select p.nombre,p.apellido,c.nombre as categoria , puntos_min as puntos_minimos_para_la_categoria,puntos_max as puntos_maximos_para_la_categoria, puntos_participante as puntos_actuales
+from inscripciones i
+inner join participantes p ON i.fk_parcipante = p.id_participante
+inner join categorias c on i.fk_categoria = c.idcategorias', @categoria_p);
 PREPARE runSQL from @categoria;
 execute runSQL;
 DEALLOCATE PREPARE runSQL;
@@ -27,7 +27,6 @@ END$$
 
 DELIMITER ;
 ;
-
 
 ##Este sp ordena los participantes en orde alfabetico y les muestra la edad usan la funcion de edad_participantes para tener un listado
 ## su uso seria call sp_ordena_participantes('apellido') o call sp_ordena_participantes('Nombre') para ordenar por nombre o apellido
